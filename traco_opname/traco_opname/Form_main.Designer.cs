@@ -61,6 +61,17 @@
             this.lb_34 = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.cb_oplossing1 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing2 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing3 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing4 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing12 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing34 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossingtotaal = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing123 = new System.Windows.Forms.CheckBox();
+            this.cb_oplossing124 = new System.Windows.Forms.CheckBox();
+            this.lbl_config1 = new System.Windows.Forms.Label();
+            this.lbl_config2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.num_grippervariant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_bewerking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_opname)).BeginInit();
@@ -138,7 +149,7 @@
             this.pb_opname.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_opname.Location = new System.Drawing.Point(249, 66);
             this.pb_opname.Name = "pb_opname";
-            this.pb_opname.Size = new System.Drawing.Size(747, 526);
+            this.pb_opname.Size = new System.Drawing.Size(647, 526);
             this.pb_opname.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pb_opname.TabIndex = 7;
             this.pb_opname.TabStop = false;
@@ -383,11 +394,130 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "12";
             // 
+            // cb_oplossing1
+            // 
+            this.cb_oplossing1.AutoSize = true;
+            this.cb_oplossing1.Location = new System.Drawing.Point(903, 80);
+            this.cb_oplossing1.Name = "cb_oplossing1";
+            this.cb_oplossing1.Size = new System.Drawing.Size(78, 17);
+            this.cb_oplossing1.TabIndex = 34;
+            this.cb_oplossing1.Text = "Oplossing1";
+            this.cb_oplossing1.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing2
+            // 
+            this.cb_oplossing2.AutoSize = true;
+            this.cb_oplossing2.Location = new System.Drawing.Point(903, 103);
+            this.cb_oplossing2.Name = "cb_oplossing2";
+            this.cb_oplossing2.Size = new System.Drawing.Size(78, 17);
+            this.cb_oplossing2.TabIndex = 35;
+            this.cb_oplossing2.Text = "Oplossing2";
+            this.cb_oplossing2.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing3
+            // 
+            this.cb_oplossing3.AutoSize = true;
+            this.cb_oplossing3.Location = new System.Drawing.Point(903, 126);
+            this.cb_oplossing3.Name = "cb_oplossing3";
+            this.cb_oplossing3.Size = new System.Drawing.Size(78, 17);
+            this.cb_oplossing3.TabIndex = 36;
+            this.cb_oplossing3.Text = "Oplossing3";
+            this.cb_oplossing3.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing4
+            // 
+            this.cb_oplossing4.AutoSize = true;
+            this.cb_oplossing4.Location = new System.Drawing.Point(903, 149);
+            this.cb_oplossing4.Name = "cb_oplossing4";
+            this.cb_oplossing4.Size = new System.Drawing.Size(78, 17);
+            this.cb_oplossing4.TabIndex = 37;
+            this.cb_oplossing4.Text = "Oplossing4";
+            this.cb_oplossing4.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing12
+            // 
+            this.cb_oplossing12.AutoSize = true;
+            this.cb_oplossing12.Location = new System.Drawing.Point(903, 172);
+            this.cb_oplossing12.Name = "cb_oplossing12";
+            this.cb_oplossing12.Size = new System.Drawing.Size(84, 17);
+            this.cb_oplossing12.TabIndex = 38;
+            this.cb_oplossing12.Text = "Oplossing12";
+            this.cb_oplossing12.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing34
+            // 
+            this.cb_oplossing34.AutoSize = true;
+            this.cb_oplossing34.Location = new System.Drawing.Point(902, 195);
+            this.cb_oplossing34.Name = "cb_oplossing34";
+            this.cb_oplossing34.Size = new System.Drawing.Size(84, 17);
+            this.cb_oplossing34.TabIndex = 39;
+            this.cb_oplossing34.Text = "Oplossing34";
+            this.cb_oplossing34.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossingtotaal
+            // 
+            this.cb_oplossingtotaal.AutoSize = true;
+            this.cb_oplossingtotaal.Location = new System.Drawing.Point(903, 57);
+            this.cb_oplossingtotaal.Name = "cb_oplossingtotaal";
+            this.cb_oplossingtotaal.Size = new System.Drawing.Size(102, 17);
+            this.cb_oplossingtotaal.TabIndex = 40;
+            this.cb_oplossingtotaal.Text = "OplossingTotaal";
+            this.cb_oplossingtotaal.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing123
+            // 
+            this.cb_oplossing123.AutoSize = true;
+            this.cb_oplossing123.Location = new System.Drawing.Point(902, 218);
+            this.cb_oplossing123.Name = "cb_oplossing123";
+            this.cb_oplossing123.Size = new System.Drawing.Size(90, 17);
+            this.cb_oplossing123.TabIndex = 41;
+            this.cb_oplossing123.Text = "Oplossing123";
+            this.cb_oplossing123.UseVisualStyleBackColor = true;
+            // 
+            // cb_oplossing124
+            // 
+            this.cb_oplossing124.AutoSize = true;
+            this.cb_oplossing124.Location = new System.Drawing.Point(902, 241);
+            this.cb_oplossing124.Name = "cb_oplossing124";
+            this.cb_oplossing124.Size = new System.Drawing.Size(90, 17);
+            this.cb_oplossing124.TabIndex = 42;
+            this.cb_oplossing124.Text = "Oplossing124";
+            this.cb_oplossing124.UseVisualStyleBackColor = true;
+            // 
+            // lbl_config1
+            // 
+            this.lbl_config1.AutoSize = true;
+            this.lbl_config1.Location = new System.Drawing.Point(902, 293);
+            this.lbl_config1.Name = "lbl_config1";
+            this.lbl_config1.Size = new System.Drawing.Size(16, 13);
+            this.lbl_config1.TabIndex = 43;
+            this.lbl_config1.Text = "...";
+            // 
+            // lbl_config2
+            // 
+            this.lbl_config2.AutoSize = true;
+            this.lbl_config2.Location = new System.Drawing.Point(902, 324);
+            this.lbl_config2.Name = "lbl_config2";
+            this.lbl_config2.Size = new System.Drawing.Size(16, 13);
+            this.lbl_config2.TabIndex = 44;
+            this.lbl_config2.Text = "...";
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.Controls.Add(this.lbl_config2);
+            this.Controls.Add(this.lbl_config1);
+            this.Controls.Add(this.cb_oplossing124);
+            this.Controls.Add(this.cb_oplossing123);
+            this.Controls.Add(this.cb_oplossingtotaal);
+            this.Controls.Add(this.cb_oplossing34);
+            this.Controls.Add(this.cb_oplossing12);
+            this.Controls.Add(this.cb_oplossing4);
+            this.Controls.Add(this.cb_oplossing3);
+            this.Controls.Add(this.cb_oplossing2);
+            this.Controls.Add(this.cb_oplossing1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lb_12);
@@ -467,6 +597,17 @@
         private System.Windows.Forms.ListBox lb_34;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox cb_oplossing1;
+        private System.Windows.Forms.CheckBox cb_oplossing2;
+        private System.Windows.Forms.CheckBox cb_oplossing3;
+        private System.Windows.Forms.CheckBox cb_oplossing4;
+        private System.Windows.Forms.CheckBox cb_oplossing12;
+        private System.Windows.Forms.CheckBox cb_oplossing34;
+        private System.Windows.Forms.CheckBox cb_oplossingtotaal;
+        private System.Windows.Forms.CheckBox cb_oplossing123;
+        private System.Windows.Forms.CheckBox cb_oplossing124;
+        private System.Windows.Forms.Label lbl_config1;
+        private System.Windows.Forms.Label lbl_config2;
     }
 }
 

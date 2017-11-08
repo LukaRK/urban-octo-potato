@@ -853,6 +853,35 @@ namespace traco_opname
         }
         #endregion
 
+        #region OpnamePointZijde123
+        Kpoint m_opnamepointzijde123 = new Kpoint();
+        public Kpoint OpnamePointZijde123
+        {
+            get
+            {
+                return m_opnamepointzijde123;
+            }
+            set
+            {
+                m_opnamepointzijde123 = value;
+            }
+        }
+        #endregion
+        #region OpnamePointZijde124
+        Kpoint m_opnamepointzijde124 = new Kpoint();
+        public Kpoint OpnamePointZijde124
+        {
+            get
+            {
+                return m_opnamepointzijde124;
+            }
+            set
+            {
+                m_opnamepointzijde124 = value;
+            }
+        }
+        #endregion
+
         public Grippervariant()
         {
             

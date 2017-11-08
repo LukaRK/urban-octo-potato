@@ -98,6 +98,18 @@ namespace traco_opname
 
         private void num_grippervariant_ValueChanged(object sender, EventArgs e)
         {
+            cb_oplossingtotaal.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].Oplossingtotaal;
+            cb_oplossing1.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde1;
+            cb_oplossing2.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde2;
+            cb_oplossing3.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde3;
+            cb_oplossing4.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde4;
+
+            cb_oplossing12.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde12;
+            cb_oplossing34.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde34;
+
+            cb_oplossing123.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde123;
+            cb_oplossing124.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde124;
+
             pg_grippervarianten.SelectedObject = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)];
             pb_opname.BackgroundImage = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].getopnamezone((int)c.Lengte, (int)c.Breedte, comboBox1.SelectedIndex, cb_grijper.Checked);
         }
@@ -1256,7 +1268,7 @@ namespace traco_opname
             m_pointlist.Add(new Kpoint(-l, b, 0));//1
             #endregion
             #region jobzijdes
-            List<Zijde> m_zijdes = new List<Zijde>();
+            List<Zijde> m_zijdeslokaal = new List<Zijde>();
             //TODO:afwerking van een zijde
             int border = 1;
             int afsmusborder = 2;
@@ -1276,15 +1288,15 @@ namespace traco_opname
 
                 //int richting = richting_bepalen(m_pointlist[i1].Converttopoint(), m_pointlist[i2].Converttopoint());
                 //TODO: richting klopt mss niet meer doordat er verstek is gezaagt VTB dus afw hangt niet helemaal af van enkel de richting maar ook van VBT
-                m_zijdes.Add(new Zijde());
-                m_zijdes[m_zijdes.Count - 1].m_Xstrt = m_pointlist[i1].Y;
-                m_zijdes[m_zijdes.Count - 1].m_Xend = m_pointlist[i2].Y;
-                m_zijdes[m_zijdes.Count - 1].m_Ystrt = m_pointlist[i1].X;
-                m_zijdes[m_zijdes.Count - 1].m_Yend = m_pointlist[i2].X;
+                m_zijdeslokaal.Add(new Zijde());
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Xstrt = m_pointlist[i1].Y;
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Xend = m_pointlist[i2].Y;
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Ystrt = m_pointlist[i1].X;
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Yend = m_pointlist[i2].X;
 
-                m_zijdes[m_zijdes.Count - 1].m_lengte_a = calc_distance(new Point((int)m_zijdes[m_zijdes.Count - 1].m_Xstrt, (int)m_zijdes[m_zijdes.Count - 1].m_Ystrt), new Point((int)m_zijdes[m_zijdes.Count - 1].m_Xend, (int)m_zijdes[m_zijdes.Count - 1].m_Yend));
-                m_zijdes[m_zijdes.Count - 1].m_lengte_b = 0;
-                m_zijdes[m_zijdes.Count - 1].m_lengte_c = 0;
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_lengte_a = calc_distance(new Point((int)m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Xstrt, (int)m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Ystrt), new Point((int)m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Xend, (int)m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_Yend));
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_lengte_b = 0;
+                m_zijdeslokaal[m_zijdeslokaal.Count - 1].m_lengte_c = 0;
             }
             #endregion
             #region hoeken
@@ -1450,21 +1462,21 @@ namespace traco_opname
             {
                 //m_zijdes
                 //zijdes toevoegen
-                if (hoek4 > 0) { m_zijdes.Insert(4, new Zijde()); m_zijdes[4].m_zagen = hoek4; }
-                if (hoek3 > 0) { m_zijdes.Insert(3, new Zijde()); m_zijdes[3].m_zagen = hoek3; }
-                if (hoek2 > 0) { m_zijdes.Insert(2, new Zijde()); m_zijdes[2].m_zagen = hoek2; }
-                if (hoek1 > 0) { m_zijdes.Insert(1, new Zijde()); m_zijdes[1].m_zagen = hoek1; }
+                if (hoek4 > 0) { m_zijdeslokaal.Insert(4, new Zijde()); m_zijdeslokaal[4].m_zagen = hoek4; }
+                if (hoek3 > 0) { m_zijdeslokaal.Insert(3, new Zijde()); m_zijdeslokaal[3].m_zagen = hoek3; }
+                if (hoek2 > 0) { m_zijdeslokaal.Insert(2, new Zijde()); m_zijdeslokaal[2].m_zagen = hoek2; }
+                if (hoek1 > 0) { m_zijdeslokaal.Insert(1, new Zijde()); m_zijdeslokaal[1].m_zagen = hoek1; }
             }
             for (int i = 0; i < m_pointlist.Count; ++i)
             {
                 int i2 = i + 1;
                 if (i2 == m_pointlist.Count) { i2 = 0; }
                 //punt zelf
-                m_zijdes[i].m_Xstrt = m_pointlist[i].Y;
-                m_zijdes[i].m_Xend = m_pointlist[i2].Y;
-                m_zijdes[i].m_Ystrt = m_pointlist[i].X;
-                m_zijdes[i].m_Yend = m_pointlist[i2].X;
-                m_zijdes[i].m_lengte_a = calc_distance(new Point((int)m_zijdes[i].m_Xstrt, (int)m_zijdes[i].m_Ystrt), new Point((int)m_zijdes[i].m_Xend, (int)m_zijdes[i].m_Yend));
+                m_zijdeslokaal[i].m_Xstrt = m_pointlist[i].Y;
+                m_zijdeslokaal[i].m_Xend = m_pointlist[i2].Y;
+                m_zijdeslokaal[i].m_Ystrt = m_pointlist[i].X;
+                m_zijdeslokaal[i].m_Yend = m_pointlist[i2].X;
+                m_zijdeslokaal[i].m_lengte_a = calc_distance(new Point((int)m_zijdeslokaal[i].m_Xstrt, (int)m_zijdeslokaal[i].m_Ystrt), new Point((int)m_zijdeslokaal[i].m_Xend, (int)m_zijdeslokaal[i].m_Yend));
 
                 //disabled
                 //m_zijdes[i].m_singzone = new SingZone(m_zijdes[m_zijdes.Count - 1], this);
@@ -1517,7 +1529,7 @@ namespace traco_opname
             }
 
             #region safedist
-            for (int i = 0; i < m_zijdes.Count; ++i)
+            for (int i = 0; i < m_zijdeslokaal.Count; ++i)
             {
                //// if (
                //     (i == 0 && z1safedistmax > 0)
@@ -1585,9 +1597,9 @@ namespace traco_opname
                         safezonezijde4[i3] = new Kpoint(p2.X, p2.Y, 0);
                     }
 
-                    m_zijdes[i].m_l = Convert.ToInt32(dist * (double)100);
-                    m_zijdes[i].m_x = Convert.ToInt32(p2.X * (double)100);
-                    m_zijdes[i].m_y = Convert.ToInt32(p2.Y * (double)100);
+                    m_zijdeslokaal[i].m_l = Convert.ToInt32(dist * (double)100);
+                    m_zijdeslokaal[i].m_x = Convert.ToInt32(p2.X * (double)100);
+                    m_zijdeslokaal[i].m_y = Convert.ToInt32(p2.Y * (double)100);
                     //}
                 }
             }
@@ -1625,7 +1637,7 @@ namespace traco_opname
             #endregion
 
             //vertaal de refzijdeindex in een lijst per zonevariant
-            for (int i = 0; i < m_zijdes.Count; ++i)
+            for (int i = 0; i < m_zijdeslokaal.Count; ++i)
             {
                 if (refzijdeindex[i] == 1) //if (i == 3)
                 {
@@ -2299,7 +2311,7 @@ namespace traco_opname
                     m_grippervariantlist[g].OplossingZijde4 = false;
                 }
                 #endregion
-                 #region 1 en 2 en 4
+                #region 1 en 2 en 4
                 if (m_grippervariantlist[g].OplossingZijde1 && m_grippervariantlist[g].OplossingZijde2 && m_grippervariantlist[g].OplossingZijde4)
                 {
                     if (g == 2)
@@ -2408,10 +2420,6 @@ namespace traco_opname
                 #endregion
 
                 //centrum van de zone bepalen (opnamepunt)
-                double minx = 0;
-                double miny = 0;
-                double maxx = 0;
-                double maxy = 0;
                 if (m_grippervariantlist[g].Oplossingtotaal)
                 {
                     double centerx = 0;
@@ -2428,20 +2436,24 @@ namespace traco_opname
                 }
                 if (m_grippervariantlist[g].OplossingZijde34)
                 {
-                    minx = m_grippervariantlist[g].OpnameZoneZijde34[0].X;
-                    miny = m_grippervariantlist[g].OpnameZoneZijde34[0].Y;
-                    maxx = m_grippervariantlist[g].OpnameZoneZijde34[0].X;
-                    maxy = m_grippervariantlist[g].OpnameZoneZijde34[0].Y;
-                    foreach (Kpoint k in m_grippervariantlist[g].OpnameZoneZijde34)
-                    {
-                        if (k._X < minx) { minx = k._X; }
-                        if (k._X > maxx) { maxx = k._X; }
-                        if (k._Y < miny) { miny = k._Y; }
-                        if (k._Y > maxy) { maxy = k._Y; }
-                    }
-                    double centerx = (minx + maxx) / 2;
-                    double centery = (miny + maxy) / 2;
+                    double centerx = 0;
+                    double centery = 0;
+                    berekenopnamepunt(ref m_grippervariantlist[g].m_opnamezonezijde34, ref centerx, ref centery);
                     m_grippervariantlist[g].OpnamePointZijde34 = new Kpoint(centerx, centery);
+                }
+                if (m_grippervariantlist[g].OplossingZijde124)
+                {
+                    double centerx = 0;
+                    double centery = 0;
+                    berekenopnamepunt(ref m_grippervariantlist[g].m_opnamezonezijde124, ref centerx, ref centery);
+                    m_grippervariantlist[g].OpnamePointZijde124 = new Kpoint(centerx, centery);
+                }
+                if (m_grippervariantlist[g].OplossingZijde123)
+                {
+                    double centerx = 0;
+                    double centery = 0;
+                    berekenopnamepunt(ref m_grippervariantlist[g].m_opnamezonezijde123, ref centerx, ref centery);
+                    m_grippervariantlist[g].OpnamePointZijde123 = new Kpoint(centerx, centery);
                 }
             }//hoort bij for lus over alle grijpervarianten heen
 
@@ -2541,8 +2553,28 @@ namespace traco_opname
             #endregion
 
             //beste oplossing bepalen
+            Grippervariant m_oplossing1;
+            Grippervariant m_oplossing2;
+
             int beste_index = -1;
             int beste_opp = -1;
+            int beste_index12 = -1;
+            int beste_opp12 = -1;
+            int beste_index34 = -1;
+            int beste_opp34 = -1;
+
+            int beste_index123 = -1;
+            int beste_opp123 = -1;
+
+            int beste_index124 = -1;
+            int beste_opp124 = -1;
+
+            int beste_index3 = -1;
+            int beste_opp3 = -1;
+
+            int beste_index4 = -1;
+            int beste_opp4 = -1;
+
             for (int i = 0; i < m_grippervariantlist.Count; ++i)
             {
 
@@ -2563,7 +2595,202 @@ namespace traco_opname
                     }
                 }
             }
-            Grippervariant m_oplossing = m_grippervariantlist[beste_index];
+
+            //20170921
+            int oplossing = -1;
+
+            if (beste_index == -1)
+            {
+                //geen totaaloplossing gevonden
+                //zoeken naar oplossing12
+
+                for (int i = 0; i < m_grippervariantlist.Count; ++i)
+                {
+                    if (m_grippervariantlist[i].OplossingZijde123)
+                    {
+                        if (i == 0)
+                        {
+                            beste_index123 = 0;
+                            beste_opp123 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                        }
+                        else
+                        {
+                            if (beste_opp < m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height)
+                            {
+                                beste_index123 = i;
+                                beste_opp123 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < m_grippervariantlist.Count; ++i)
+                {
+                    if (m_grippervariantlist[i].OplossingZijde4)
+                    {
+                        if (i == 0)
+                        {
+                            beste_index4 = 0;
+                            beste_opp4 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                        }
+                        else
+                        {
+                            if (beste_opp < m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height)
+                            {
+                                beste_index4 = i;
+                                beste_opp4 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < m_grippervariantlist.Count; ++i)
+                {
+                    if (m_grippervariantlist[i].OplossingZijde124)
+                    {
+                        if (i == 0)
+                        {
+                            beste_index124 = 0;
+                            beste_opp124 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                        }
+                        else
+                        {
+                            if (beste_opp < m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height)
+                            {
+                                beste_index124 = i;
+                                beste_opp124 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < m_grippervariantlist.Count; ++i)
+                {
+                    if (m_grippervariantlist[i].OplossingZijde3)
+                    {
+                        if (i == 0)
+                        {
+                            beste_index3 = 0;
+                            beste_opp3 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                        }
+                        else
+                        {
+                            if (beste_opp < m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height)
+                            {
+                                beste_index3 = i;
+                                beste_opp3 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < m_grippervariantlist.Count; ++i)
+                {
+                    if (m_grippervariantlist[i].OplossingZijde12)
+                    {
+                        if (i == 0)
+                        {
+                            beste_index12 = 0;
+                            beste_opp12 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                        }
+                        else
+                        {
+                            if (beste_opp < m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height)
+                            {
+                                beste_index12 = i;
+                                beste_opp12 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < m_grippervariantlist.Count; ++i)
+                {
+                    if (m_grippervariantlist[i].OplossingZijde12)
+                    {
+                        if (i == 0)
+                        {
+                            beste_index34 = 0;
+                            beste_opp34 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                        }
+                        else
+                        {
+                            if (beste_opp < m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height)
+                            {
+                                beste_index34 = i;
+                                beste_opp34 = m_grippervariantlist[i].Inner.Width * m_grippervariantlist[i].Inner.Height;
+                            }
+                        }
+                    }
+                }
+
+                if (beste_index124 != -1 && beste_index3 != -1)
+                {
+                    m_oplossing1 = m_grippervariantlist[beste_index124];
+                    m_oplossing2 = m_grippervariantlist[beste_index3];
+                    lbl_config1.Text = "Config1: " + beste_index124.ToString();
+                    lbl_config2.Text = "Config2: " + beste_index3.ToString();
+                    oplossing = 124;
+                }
+                else if (beste_index123 != -1 && beste_index4 != -1)
+                {
+                    m_oplossing1 = m_grippervariantlist[beste_index123];
+                    m_oplossing2 = m_grippervariantlist[beste_index4];
+                    lbl_config1.Text = "Config1: " + beste_index123.ToString();
+                    lbl_config2.Text = "Config2: " + beste_index4.ToString();
+                    oplossing = 123;
+                }
+                else if (beste_index12 != -1 && beste_index34 != -1)
+                {
+                    m_oplossing1 = m_grippervariantlist[beste_index12];
+                    m_oplossing2 = m_grippervariantlist[beste_index34];
+                    lbl_config1.Text = "Config1: " + beste_index12.ToString();
+                    lbl_config2.Text = "Config2: " + beste_index34.ToString();
+                    oplossing = 12;
+                }
+                else
+                {
+                    m_oplossing1 = null;
+                    m_oplossing2 = null;
+                    lbl_config1.Text = "Config1: /";
+                    lbl_config2.Text = "Config2: /";
+                    oplossing = -1;
+                }
+            }
+            else
+            {
+                m_oplossing1 = m_grippervariantlist[beste_index];
+                m_oplossing2 = m_grippervariantlist[beste_index];
+
+                lbl_config1.Text = "Config1: " + beste_index.ToString();
+                lbl_config2.Text = "Config2: " + beste_index.ToString();
+
+                oplossing = 0;
+            }
+
+            //m_zijdeslokaal
+            //refzijdeindex
+            for (int i = 0; i < m_zijdeslokaal.Count; ++i)
+            {
+                switch (refzijdeindex[i])
+                {
+                    case 1:
+                        m_zijdeslokaal[i].m_opnamenr = 1;
+                        break;
+                    case 2:
+                        m_zijdeslokaal[i].m_opnamenr = 1;
+                        break;
+                    case 3:
+                        if (oplossing == 123) { m_zijdeslokaal[i].m_opnamenr = 1; }
+                        else if (oplossing == 124 || oplossing == 12) { m_zijdeslokaal[i].m_opnamenr = 2; }
+                        break;
+                    case 4:
+                        if (oplossing == 124) { m_zijdeslokaal[i].m_opnamenr = 1; }
+                        else if (oplossing == 123 || oplossing == 12) { m_zijdeslokaal[i].m_opnamenr = 2; }
+                        break;
+                }
+            }
+
         }
 
 
@@ -2676,21 +2903,43 @@ namespace traco_opname
 
         public void berekenopnamepunt(ref List<Kpoint> zone, ref double px, ref double py)
         {
-            double somx = 0;
-            double somy = 0;
-            int aantal = 0;
-            foreach (Kpoint k in zone)
-            {//kopieren zone1 in de oplossing
-                somx+=k.X;
-                somy += k.Y;
-                aantal++;
+            if (puntinoppervlak(zone, new Kpoint(0, 0), true))
+            {
+                px = 0;
+                py = 0;
             }
-            px = somx / aantal;
-            py = somy / aantal;
+            else
+            {
+                double somx = 0;
+                double somy = 0;
+                int aantal = 0;
+                foreach (Kpoint k in zone)
+                {
+                    //kopieren zone1 in de oplossing
+                    somx += k.X;
+                    somy += k.Y;
+                    aantal++;
+                }
+                px = somx / aantal;
+                py = somy / aantal;
+            }
         }        //private 
             
         void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cb_oplossingtotaal.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].Oplossingtotaal;
+            cb_oplossing1.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde1;
+            cb_oplossing2.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde2;
+            cb_oplossing3.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde3;
+            cb_oplossing4.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde4;
+
+            cb_oplossing12.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde12;
+            cb_oplossing34.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde34;
+
+            cb_oplossing123.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde123;
+            cb_oplossing124.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].OplossingZijde124;
+
+
             pb_opname.BackgroundImage = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].getopnamezone((int)c.Lengte, (int)c.Breedte, comboBox1.SelectedIndex, cb_grijper.Checked);
         }
 
