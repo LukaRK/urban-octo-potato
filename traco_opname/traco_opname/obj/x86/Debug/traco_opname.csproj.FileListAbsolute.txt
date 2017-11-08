@@ -1,0 +1,40 @@
+D:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Form_main.resources
+D:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.resources
+D:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
+D:\traco_opname\traco_opname\bin\Debug\traco_opname.exe
+D:\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
+D:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.exe
+D:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.pdb
+D:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csprojResolveAssemblyReference.cache
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.exe
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.pdb
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\bin\Debug\traco_opname.exe
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csprojResolveAssemblyReference.cache
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Form_main.resources
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.resources
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
+E:\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.exe
+E:\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.pdb
+E:\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csprojResolveAssemblyReference.cache
+E:\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Form_main.resources
+E:\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.resources
+E:\Traco Opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
+E:\Traco Opname\traco_opname\traco_opname\bin\Debug\traco_opname.exe
+E:\Traco Opname\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.exe
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.pdb
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\bin\Debug\traco_opname.exe
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csprojResolveAssemblyReference.cache
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Form_main.resources
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.resources
+\\OPTISRV2012\Folder Redirection\Jan.vanelsacker\Documents\Jan\Traco\12090217\traco_opname\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
+H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.exe
+H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.pdb
+H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csprojResolveAssemblyReference.cache
+H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Form_main.resources
+H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.resources
+H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
+H:\traco_opname\traco_opname\bin\Debug\traco_opname.exe
+H:\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
