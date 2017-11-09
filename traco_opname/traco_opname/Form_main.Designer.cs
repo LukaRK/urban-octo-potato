@@ -206,6 +206,7 @@
             // 
             // lb_zijde1
             // 
+            this.lb_zijde1.BackColor = System.Drawing.SystemColors.Window;
             this.lb_zijde1.FormattingEnabled = true;
             this.lb_zijde1.Location = new System.Drawing.Point(320, 623);
             this.lb_zijde1.Name = "lb_zijde1";
@@ -238,6 +239,7 @@
             // 
             // lb_134
             // 
+            this.lb_134.BackColor = System.Drawing.SystemColors.Window;
             this.lb_134.FormattingEnabled = true;
             this.lb_134.Location = new System.Drawing.Point(931, 623);
             this.lb_134.Name = "lb_134";

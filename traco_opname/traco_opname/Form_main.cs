@@ -125,6 +125,8 @@ namespace traco_opname
             {
                 OpenFileDialog ofd_file = new OpenFileDialog();
                 DialogResult res = ofd_file.ShowDialog();
+                m_grippervariantlist.Clear();
+                deserialize();
                
                 if (res == DialogResult.OK)
                 {
@@ -137,6 +139,7 @@ namespace traco_opname
                 }
 
                 Verwerk();
+                Show_if_solution_impossible();
                 //Next_Job = new Job_def(c, ref m_gripperselector, ref mySettings);
                 //pb_next.BackgroundImage = Next_Job.getpreview(0, 0);
             }
@@ -1126,7 +1129,7 @@ namespace traco_opname
             lb_124.Items.Clear();
             lb_134.Items.Clear();
             lb_234.Items.Clear();
-
+            
             #region SETUP
             #region variabelen
             List<Bewerking> Z1limieten = new List<Bewerking>();
@@ -1511,7 +1514,7 @@ namespace traco_opname
             List<int> m_zijde234index = new List<int>();
             List<int> m_zijde123index = new List<int>();
             List<int> m_zijde134index = new List<int>();
-
+            
             List<int> m_zijde12index = new List<int>();
             List<int> m_zijde34index = new List<int>();
 
@@ -2465,57 +2468,11 @@ namespace traco_opname
             foreach (int i in m_zijde1index)
             {
                 lb_zijde1.Items.Add(i);
-
-                //bool ok13 = false;
-                //bool ok14 = false;
-
-                //foreach (int n in m_zijde3index)
-                //{
-                //    if (i == n) { ok13 = true; }
-                //}
-                //foreach (int k in m_zijde4index)
-                //{
-                //    if (i == k) { ok14 = true; }
-                //}
-                //if (ok13 && ok14) { m_zijde134index.Add(i); }
             }
             foreach (int i in m_zijde2index)
             {
                 lb_zijde2.Items.Add(i);
-
-                //bool ok12 = false;
-                //bool ok23 = false;
-                //bool ok24 = false;
-
-                //foreach (int j in m_zijde1index)
-                //{
-                //    if (i == j) { ok12 = true; }
-                //}
-                //foreach (int n in m_zijde3index)
-                //{
-                //    if (i == n) { ok23 = true; }
-                //}
-                //foreach (int k in m_zijde4index)
-                //{
-                //    if (i == k) { ok24 = true; }
-                //}
-                //if (ok23 && ok24) { m_zijde234index.Add(i); }
-                //if (ok12 && ok24) { m_zijde124index.Add(i); }
-                //if (ok12 && ok23) { m_zijde123index.Add(i); }
-                ////if (ok12) { m_zijde12index.Add(i); }
             }
-
-            //foreach (int i in m_zijde3index)
-            //{
-            //    bool ok34 = false;
-
-            //    foreach (int n in m_zijde4index)
-            //    {
-            //        if (i == n) { ok34 = true; }
-            //    }
-            //    if (ok34) { m_zijde34index.Add(i); }
-            //}
-
             foreach (int i in m_zijde3index)
             {
                 lb_zijde3.Items.Add(i);
@@ -2924,7 +2881,29 @@ namespace traco_opname
                 py = somy / aantal;
             }
         }        //private 
-            
+
+        /// <summary>
+        /// Color label when Seite has Bearbeitung and no solution
+        /// </summary>
+        private void Show_if_solution_impossible() 
+        {
+            if (c.Seite4.Bearbeitung1.Typ_Name != "" && lb_zijde1.Items.Count == 0)
+            { lb_zijde1.BackColor = Color.Red;}
+            else { lb_zijde1.BackColor = SystemColors.Window; }
+
+            if (c.Seite1.Bearbeitung1.Typ_Name != "" && lb_zijde2.Items.Count == 0)
+            { lb_zijde2.BackColor = Color.Red; }
+            else { lb_zijde2.BackColor = SystemColors.Window; }
+
+            if (c.Seite2.Bearbeitung1.Typ_Name != "" && lb_zijde3.Items.Count == 0)
+            { lb_zijde3.BackColor = Color.Red; }
+            else { lb_zijde3.BackColor = SystemColors.Window; }
+
+            if (c.Seite3.Bearbeitung1.Typ_Name != "" && lb_zijde4.Items.Count == 0)
+            { lb_zijde4.BackColor = Color.Red; }
+            else { lb_zijde4.BackColor = SystemColors.Window; }
+        }
+
         void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             cb_oplossingtotaal.Checked = m_grippervariantlist[Convert.ToInt32(num_grippervariant.Value)].Oplossingtotaal;

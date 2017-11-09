@@ -38,3 +38,12 @@ H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.res
 H:\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
 H:\traco_opname\traco_opname\bin\Debug\traco_opname.exe
 H:\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\bin\Debug\traco_opname.exe
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\bin\Debug\traco_opname.pdb
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csprojResolveAssemblyReference.cache
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Form_main.resources
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.Properties.Resources.resources
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.GenerateResource.Cache
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.csproj.CoreCompileInputs.cache
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.exe
+C:\Users\luka.ramaekers\Source\Repos\urban-octo-potato\traco_opname\traco_opname\obj\x86\Debug\traco_opname.pdb
